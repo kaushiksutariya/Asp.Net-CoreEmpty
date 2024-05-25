@@ -16,13 +16,15 @@ app.Use(async (HttpContext, Next) =>
 {
     await HttpContext.Response.WriteAsync("Welcome to dotnet 6 \n");
     await Next(HttpContext);   
+    //reverse  use which is written below next in reverse order
 });
 #endregion
 
-#region Do not use RUN Method for middlewafre if you want multiple custom middleware  as it does not have Next parameter
+#region Do not use RUN Method for middlewafre if you want multiple custom middleware  as it does not have Next parameter , Subsitute
 app.Run(async (HttpContext) =>
 {
     await HttpContext.Response.WriteAsync("Welcome to Secound Middleware");
+    //reverse  use which is written below next in reverse order
 });
 #endregion
 #endregion
