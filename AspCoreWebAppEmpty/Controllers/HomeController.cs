@@ -2,6 +2,7 @@
 
 namespace AspCoreWebAppEmpty.Controllers
 {
+    //called token [controller]/[action]
     [Route("[controller]/[action]")]
     //[Route("Home")]
     public class HomeController : Controller
